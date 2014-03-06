@@ -1,0 +1,258 @@
+@font-face {
+    font-family: ChampagneBold;
+    src: url(fonts/Champagne-Limousines-Bold.ttf);
+    font-weight:400;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-user-select:none;
+    -webkit-user-drag:none;
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body{
+    display: -webkit-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+.workspace{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    font-size:16px;
+    -webkit-box-orient:vertical;
+    background-color: #888;
+}
+.header{
+    font-size:150%;
+    width:100%;
+    height:35px;
+    min-height:35px;
+    -webkit-text-size-adjust:none;
+    background: #333;
+    color:#FFF;
+    text-shadow: -1px -1px 0 #000;
+    display: -webkit-box;
+    /*-webkit-box-pack: center;*/
+    -webkit-box-align: center;
+    top:0;
+    position:absolute;
+    z-index:9999;
+    /*box-shadow: 0 1px 10px rgba(0,0,0,0.6);*/
+}
+.title{
+    padding-left:2%;   
+    font-family: ChampagneBold;
+    min-width:300px;
+}
+.header-control-holder{
+    display:-webkit-box;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: horizontal;
+    height: 100%;
+    overflow:hidden;
+}
+.control-holder{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    min-width: 60px;
+    z-index: 9998;
+    background-color: #F7F7F7;
+    padding-top: 60px;
+    text-align: center;
+}
+.header-control-holder .tool-btn{
+    width: 100px;
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.7) inset, 0 0px 1px rgba(255,255,255,0.2) inset;
+    border-left: 1px solid rgba(0, 0, 0, 0.8);
+    border-right: 1px solid rgba(0, 0, 0, 0.9);
+    background-color: #C1C1C1;
+    background-image: -moz-linear-gradient(top, rgba(193, 193, 193, 1) 0%, rgba(221, 221, 221, 1) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(193, 193, 193, 1)), color-stop(100%,rgba(221, 221, 221, 1)));
+    background-image: -webkit-linear-gradient(top, rgba(193, 193, 193, 1) 0%,rgba(221, 221, 221, 1) 100%);
+    background-image: -o-linear-gradient(top, rgba(193, 193, 193, 1) 0%,rgba(221, 221, 221, 1) 100%);
+    background-image: -ms-linear-gradient(top, rgba(193, 193, 193, 1) 0%,rgba(221, 221, 221, 1) 100%);
+    background-image: linear-gradient(top, rgba(193, 193, 193, 1) 0%,rgba(221, 221, 221, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c1c1c1', endColorstr='#dddddd',GradientType=0 );
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    color: #444;
+    margin-top: 2px;
+    margin-right:10px;
+    cursor: pointer;
+}
+.header-control-holder .tool-btn.tool-btn-hover{
+    background-color: #ec6352;
+    background-image: none;
+}
+.control-holder .tool-btn{
+    margin: 0 auto 10px auto;
+    width: 45px;
+    height: 45px;
+    background-color: #444;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.7);
+    color: #EEE;
+    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+.control-holder .tool-btn.tool-btn-active{
+    background-color: #ec6352;
+}
+.control-holder .tool-btn.btn-hover{
+    box-shadow: 0 0 2px rgba(0,0,0,0.7),0 0 10px rgba(255,255,255,1),0 0 10px rgba(255,0,0,0.7) ;
+}
+.paper-holder{
+    background-color: #DDD;
+    display:-webkit-box;
+    top:35px;
+    bottom:0;
+    left:60px;
+    right:0;
+    position:absolute;
+    overflow: hidden;
+    /*padding:10px;*/z-index:0;
+    -webkit-box-pack: center;
+    -webkit-transition:left 1s;
+}
+.paper-config{
+    background: black;
+}
+.paper{
+    height: 700px;
+    width: 600px;
+    margin: 10px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position:relative;
+}
+.text{
+    font-size:100%;
+}
+.block{
+    position:absolute;
+    background-color:rgba(0,0,0,0.05);
+    display:-webkit-box;
+    line-height:13px;
+    font-size:13px;
+    -webkit-box-orient:vertical;
+    text-align:justify;
+    word-wrap:break-word;
+    cursor: default;
+}
+.block.text-overflow{
+    border-bottom: 1px solid #FF0000;
+}
+.block .notify{
+    top: 100%;
+    position: absolute;
+    right: 0px;
+    font-size: 11px;
+    line-height:15px;
+    /*padding: 2px 0px;*/
+    /*display: none;*/
+    opacity: 0.0;
+    -webkit-transition: opacity 1s ease-in-out, color 1s ease-in-out;
+}/*
+@-webkit-keyframes fade {
+ from {
+   opacity: 1.0;
+ }
+ to {
+   opacity: 0.0;
+ }
+}*/
+.block .notify.warning{
+    color: red;
+    /*display: block;*/
+    opacity: 1.0;
+    -webkit-transition: none;
+    /*-webkit-animation-name: fade;*/
+    /*-webkit-animation-duration: 2s;*/
+    /*-webkit-animation-timing-function: ease-in-out;*/
+    /*-webkit-animation-direction: alternate;*/
+}
+.pointer-tool-btn{
+    background-image: url('icons/resize_move.png');
+    background-size: 50%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.drawblock-tool-btn{
+    background-image: url('icons/text.png');
+    background-size: 70%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.drawimage-tool-btn{
+    background-image: url('icons/image.png');
+    background-size: 70%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+.tab-label{
+    width: 90px;
+    margin: 3px 2px 0 2px;
+    background-color: #AAA;
+    box-shadow: 0 -1px 1px rgba(0,0,0,0.7) inset;
+    cursor: pointer;
+    text-align:center;
+    position: relative;
+    padding-right: 4px;
+}
+.tab-label.tab-active {
+    width: 90px;
+    background: #DDD;
+    margin: 1px 2px 0 2px;
+    box-shadow: 0 0 5px #000;
+}

@@ -1,0 +1,1 @@
+EDITOR.event = {}; // Event bundle for an element
